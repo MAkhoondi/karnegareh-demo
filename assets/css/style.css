@@ -254,9 +254,14 @@ a.tag:hover, .tag:hover { border-color: var(--primary); color: var(--primary); }
   transition: opacity .6s var(--ease), visibility .6s;
 }
 .preloader.hide { opacity: 0; visibility: hidden; pointer-events: none; }
-.preloader-inner { position: relative; width: 90px; height: 90px; display: grid; place-items: center; }
-.preloader-ring { position: absolute; inset: 0; border-radius: 50%; border: 3px solid var(--border); border-top-color: var(--primary); border-inline-end-color: var(--secondary); animation: spin 1s linear infinite; }
-.preloader-logo { font-size: 32px; font-weight: 900; }
+.preloader-inner { display: grid; justify-items: center; gap: 16px; }
+.preloader-brand { font-size: 30px; font-weight: 900; letter-spacing: -.3px; line-height: 1; color: var(--text); animation: pl-breathe 1.8s ease-in-out infinite; }
+.preloader-brand i { font-style: normal; color: var(--primary); }
+.preloader-bar { position: relative; width: 132px; height: 3px; border-radius: 3px; background: var(--border); overflow: hidden; }
+.preloader-bar i { position: absolute; inset-block: 0; inset-inline-start: 0; width: 45%; border-radius: inherit; background: linear-gradient(90deg, var(--primary), var(--secondary)); animation: pl-slide 1.15s cubic-bezier(.65, 0, .35, 1) infinite; }
+@keyframes pl-slide { from { transform: translateX(-110%); } to { transform: translateX(230%); } }
+@keyframes pl-breathe { 50% { opacity: .6; } }
+@media (prefers-reduced-motion: reduce) { .preloader-brand, .preloader-bar i { animation: none; } .preloader-bar i { width: 100%; } }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ===================== 06. هدر ===================== */
