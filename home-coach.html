@@ -13,23 +13,22 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/demos.css">
   <!-- اعمال سریع تنظیمات ذخیره‌شده همین صفحه برای جلوگیری از پرش رنگ -->
-  <script>try{var p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme-'+p),c=localStorage.getItem('kg-color-'+p);if(t)document.documentElement.setAttribute('data-theme',t);if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme'),c=localStorage.getItem('kg-color-'+p),k=d.getAttribute('data-context')==='inner'&&JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');if(k){c=c||k.color;t=t||k.theme;}if(t)d.setAttribute('data-theme',t);if(c)d.setAttribute('data-color',c);if(sessionStorage.getItem('kg-pl-'+p))d.classList.add('pl-seen');}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="demo-coach font-lalezar">
   <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
-
   <div class="preloader" aria-hidden="true">
-    <div class="preloader-inner"><span class="preloader-brand">رامین<i>.</i></span><span class="preloader-bar"><i></i></span></div>
+    <div class="preloader-inner"><span class="preloader-mark"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 14.4 9.6 9.6M18.66 21.51a2 2 0 1 1-2.83-2.83l-1.77 1.77a2 2 0 1 1-2.83-2.83l6.37-6.37a2 2 0 1 1 2.83 2.83l-1.77 1.77a2 2 0 1 1 2.83 2.83ZM21.5 21.5l-1.4-1.4M3.9 3.9 2.5 2.5M6.4 12.77a2 2 0 1 1-2.83-2.83l1.77-1.77a2 2 0 1 1-2.83-2.83l2.83-2.83a2 2 0 1 1 2.83 2.83l1.77-1.77a2 2 0 1 1 2.83 2.83Z"/></svg></span><span class="preloader-bar"><i></i></span></div>
   </div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ر</span><span>رامین<span class="logo-dot">.</span></span></a>
+      <a href="home-coach.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ر</span><span>رامین<span class="logo-dot">.</span></span></a>
       <nav class="nav" aria-label="منوی اصلی">
-        <div class="nav-head"><a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ر</span><span>رامین<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="بستن منو"><svg class="icon"><use href="#i-close"></use></svg></button></div>
+        <div class="nav-head"><a href="home-coach.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ر</span><span>رامین<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="بستن منو"><svg class="icon"><use href="#i-close"></use></svg></button></div>
         <ul class="nav-list"><li><a class="nav-link active" href="#home">خانه</a></li><li><a class="nav-link" href="#programs">برنامه‌ها</a></li><li><a class="nav-link" href="#about">درباره</a></li><li><a class="nav-link" href="#bmi">BMI</a></li><li><a class="nav-link" href="#schedule">کلاس‌ها</a></li><li><a class="nav-link" href="#pricing">عضویت</a></li><li class="has-sub"><a class="nav-link" href="about.html" aria-haspopup="true">صفحات <svg class="icon"><use href="#i-chevron-down"></use></svg></a><div class="sub-menu cols-2"><a href="about.html">درباره من</a><a href="services.html">خدمات</a><a href="portfolio.html">نمونه کارها</a><a href="portfolio-details.html">جزئیات نمونه کار</a><a href="blog.html">وبلاگ</a><a href="blog-details.html">جزئیات مقاله</a><a href="pricing.html">تعرفه‌ها</a><a href="faq.html">سؤالات متداول</a><a href="contact.html">تماس با من</a><a href="resume-print.html">رزومه قابل چاپ</a><a href="coming-soon.html">به‌زودی</a><a href="404.html">صفحه ۴۰۴</a></div></li></ul>
         <div class="nav-foot"><a href="#contact" class="btn btn-primary"><svg class="icon"><use href="#i-dumbbell"></use></svg>مشاوره رایگان</a><div class="socials"><a href="#" aria-label="اینستاگرام"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="تلگرام"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="واتس‌اپ"><svg class="icon"><use href="#i-whatsapp"></use></svg></a></div></div>
       </nav>
@@ -113,7 +112,7 @@
       <div class="container">
         <div class="section-head" data-reveal="up"><span class="subtitle">عضویت</span><h2 class="section-title">پلن <span class="text-gradient">مناسب</span> خودت را انتخاب کن</h2></div><div class="pricing-grid"><div class="card price-card" data-reveal="up">
             <div class="price-icon"><svg class="icon"><use href="#i-dumbbell"></use></svg></div><h3>برنامه آنلاین</h3><p>برنامه تمرین و تغذیه + پشتیبانی تلگرامی</p>
-            <div class="price"><strong>۱٫۵</strong><span>میلیون تومان / ماه</span></div>
+            <div class="price"><strong>۱٬۵۰۰</strong><span>هزار تومان / ماه</span></div>
             <ul class="price-features"><li><svg class="icon"><use href="#i-check"></use></svg>برنامه تمرینی شخصی</li><li><svg class="icon"><use href="#i-check"></use></svg>برنامه غذایی</li><li><svg class="icon"><use href="#i-check"></use></svg>چک‌این هفتگی</li><li class="off"><svg class="icon"><use href="#i-close"></use></svg>جلسه حضوری</li></ul>
             <a href="#contact" class="btn btn-outline btn-block">انتخاب پلن</a></div><div class="card price-card featured" data-reveal="up" style="--delay:0.1s"><span class="price-badge">محبوب‌ترین</span>
             <div class="price-icon"><svg class="icon"><use href="#i-flame"></use></svg></div><h3>تحول ۱۲ هفته‌ای</h3><p>محبوب‌ترین برنامه برای نتیجه قطعی</p>
@@ -148,9 +147,9 @@
 
     <section class="section" id="contact">
       <div class="container">
-        <div class="section-head" data-reveal="up"><span class="subtitle">شروع کن</span><h2 class="section-title">همین امروز <span class="text-gradient">شروع کن</span></h2><p class="section-desc">فرم را پر کن تا برای مشاوره رایگان تماس بگیرم.</p></div><div class="contact-grid"><div class="contact-info" data-reveal="start"><a href="tel:+982122559900" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-phone"></use></svg></span><div><small>تلفن باشگاه</small><b dir="ltr">021 2255 9900</b></div></a><a href="https://wa.me/989123004050" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-whatsapp"></use></svg></span><div><small>واتس‌اپ</small><b dir="ltr">0912 300 4050</b></div></a><div class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-map-pin"></use></svg></span><div><small>باشگاه</small><b>تهران، پاسداران، گلستان دوم، باشگاه آیرون</b></div></div><div class="card contact-avail"><span class="avail"><span class="status-dot"></span>ظرفیت شاگرد خصوصی: ۳ نفر</span><div class="socials"><a href="#" aria-label="اینستاگرام"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="تلگرام"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="واتس‌اپ"><svg class="icon"><use href="#i-whatsapp"></use></svg></a></div></div></div><form class="card contact-form" action="#" method="post" data-validate novalidate data-reveal="end">
+        <div class="section-head" data-reveal="up"><span class="subtitle">شروع کن</span><h2 class="section-title">همین امروز <span class="text-gradient">شروع کن</span></h2><p class="section-desc">فرم را پر کن تا برای مشاوره رایگان تماس بگیرم.</p></div><div class="contact-grid"><div class="contact-info" data-reveal="start"><a href="tel:+982122559900" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-phone"></use></svg></span><div><small>تلفن باشگاه</small><b dir="ltr">۰۲۱ ۲۲۵۵ ۹۹۰۰</b></div></a><a href="https://wa.me/989123004050" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-whatsapp"></use></svg></span><div><small>واتس‌اپ</small><b dir="ltr">۰۹۱۲ ۳۰۰ ۴۰۵۰</b></div></a><div class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-map-pin"></use></svg></span><div><small>باشگاه</small><b>تهران، پاسداران، گلستان دوم، باشگاه آیرون</b></div></div><div class="card contact-avail"><span class="avail"><span class="status-dot"></span>ظرفیت شاگرد خصوصی: ۳ نفر</span><div class="socials"><a href="#" aria-label="اینستاگرام"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="تلگرام"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="واتس‌اپ"><svg class="icon"><use href="#i-whatsapp"></use></svg></a></div></div></div><form class="card contact-form" action="#" method="post" data-validate novalidate data-reveal="end">
             <h3>درخواست مشاوره رایگان</h3><p>جلسه اول مشاوره رایگان است.</p>
-            <div class="form-row"><div class="form-group"><label for="ft-name">نام</label><input class="form-control" id="ft-name" name="name" type="text" placeholder="" required><span class="error-msg">نام را وارد کنید.</span></div><div class="form-group"><label for="ft-phone">شماره موبایل</label><input class="form-control" id="ft-phone" name="phone" type="tel" placeholder="۰۹۱۲۰۰۰۰۰۰۰" required><span class="error-msg">شماره را وارد کنید.</span></div></div><div class="form-row"><div class="form-group"><label for="ft-goal">هدف شما</label><select class="form-control" id="ft-goal" name="goal" required><option value="">انتخاب کنید…</option><option>کاهش وزن</option><option>عضله‌سازی</option><option>تناسب اندام</option><option>آمادگی مسابقه</option></select><span class="error-msg">هدف را انتخاب کنید.</span></div><div class="form-group"><label for="ft-plan">برنامه</label><select class="form-control" id="ft-plan" name="plan" required><option value="">انتخاب کنید…</option><option>برنامه آنلاین</option><option>تحول ۱۲ هفته‌ای</option><option>مربی خصوصی</option></select><span class="error-msg">برنامه را انتخاب کنید.</span></div></div><div class="form-group"><label for="ft-message">توضیحات (سن، قد، وزن، سابقه ورزشی) <small>(اختیاری)</small></label><textarea class="form-control" id="ft-message" name="message" placeholder="" minlength="0"></textarea></div>
+            <div class="form-row"><div class="form-group"><label for="ft-name">نام</label><input class="form-control" id="ft-name" name="name" type="text" placeholder="" required><span class="error-msg">نام را وارد کنید.</span></div><div class="form-group"><label for="ft-phone">شماره موبایل</label><input class="form-control" id="ft-phone" name="phone" type="tel" placeholder="۰۹۱۲۰۰۰۰۰۰۰" required dir="ltr"><span class="error-msg">شماره را وارد کنید.</span></div></div><div class="form-row"><div class="form-group"><label for="ft-goal">هدف شما</label><select class="form-control" id="ft-goal" name="goal" required><option value="">انتخاب کنید…</option><option>کاهش وزن</option><option>عضله‌سازی</option><option>تناسب اندام</option><option>آمادگی مسابقه</option></select><span class="error-msg">هدف را انتخاب کنید.</span></div><div class="form-group"><label for="ft-plan">برنامه</label><select class="form-control" id="ft-plan" name="plan" required><option value="">انتخاب کنید…</option><option>برنامه آنلاین</option><option>تحول ۱۲ هفته‌ای</option><option>مربی خصوصی</option></select><span class="error-msg">برنامه را انتخاب کنید.</span></div></div><div class="form-group"><label for="ft-message">توضیحات (سن، قد، وزن، سابقه ورزشی) <small>(اختیاری)</small></label><textarea class="form-control" id="ft-message" name="message" placeholder="" minlength="0"></textarea></div>
             <button type="submit" class="btn btn-primary"><span class="btn-text">ارسال درخواست <svg class="icon flip-rtl"><use href="#i-send"></use></svg></span></button>
           </form></div>
       </div>
@@ -162,7 +161,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ر</span><span>رامین<span class="logo-dot">.</span></span></a>
+          <a href="home-coach.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ر</span><span>رامین<span class="logo-dot">.</span></span></a>
           <p>مربی بدنسازی و تناسب اندام؛ برنامه‌های علمی و شخصی برای تحولی ماندگار.</p>
           <div class="socials"><a href="#" aria-label="اینستاگرام"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="تلگرام"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="واتس‌اپ"><svg class="icon"><use href="#i-whatsapp"></use></svg></a></div>
         </div>
@@ -172,8 +171,8 @@
           <h4>در ارتباط باشیم</h4>
           
           <p>عضو خبرنامه شوید تا از تازه‌ها باخبر شوید.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="ایمیل شما" aria-label="ایمیل" dir="ltr">
+          <form class="newsletter-form" novalidate>
+            <input type="email" name="email" autocomplete="email" required placeholder="ایمیل شما" aria-label="ایمیل" dir="ltr">
             <button class="btn btn-primary" type="submit" aria-label="عضویت"><svg class="icon flip-rtl"><use href="#i-send"></use></svg></button>
           </form>
         </div>

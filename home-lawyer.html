@@ -13,23 +13,22 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/demos.css">
   <!-- اعمال سریع تنظیمات ذخیره‌شده همین صفحه برای جلوگیری از پرش رنگ -->
-  <script>try{var p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme-'+p),c=localStorage.getItem('kg-color-'+p);if(t)document.documentElement.setAttribute('data-theme',t);if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme'),c=localStorage.getItem('kg-color-'+p),k=d.getAttribute('data-context')==='inner'&&JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');if(k){c=c||k.color;t=t||k.theme;}if(t)d.setAttribute('data-theme',t);if(c)d.setAttribute('data-color',c);if(sessionStorage.getItem('kg-pl-'+p))d.classList.add('pl-seen');}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="demo-lawyer font-naskh">
   <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
-
   <div class="preloader" aria-hidden="true">
-    <div class="preloader-inner"><span class="preloader-brand">بهرامی<i>.</i></span><span class="preloader-bar"><i></i></span></div>
+    <div class="preloader-inner"><span class="preloader-mark"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span><span class="preloader-bar"><i></i></span></div>
   </div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ب</span><span>بهرامی<span class="logo-dot">.</span></span></a>
+      <a href="home-lawyer.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ب</span><span>بهرامی<span class="logo-dot">.</span></span></a>
       <nav class="nav" aria-label="منوی اصلی">
-        <div class="nav-head"><a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ب</span><span>بهرامی<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="بستن منو"><svg class="icon"><use href="#i-close"></use></svg></button></div>
+        <div class="nav-head"><a href="home-lawyer.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ب</span><span>بهرامی<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="بستن منو"><svg class="icon"><use href="#i-close"></use></svg></button></div>
         <ul class="nav-list"><li><a class="nav-link active" href="#home">خانه</a></li><li><a class="nav-link" href="#areas">حوزه‌ها</a></li><li><a class="nav-link" href="#about">درباره</a></li><li><a class="nav-link" href="#cases">سوابق</a></li><li><a class="nav-link" href="#faq">سؤالات</a></li><li><a class="nav-link" href="#consult">مشاوره</a></li><li class="has-sub"><a class="nav-link" href="about.html" aria-haspopup="true">صفحات <svg class="icon"><use href="#i-chevron-down"></use></svg></a><div class="sub-menu cols-2"><a href="about.html">درباره من</a><a href="services.html">خدمات</a><a href="portfolio.html">نمونه کارها</a><a href="portfolio-details.html">جزئیات نمونه کار</a><a href="blog.html">وبلاگ</a><a href="blog-details.html">جزئیات مقاله</a><a href="pricing.html">تعرفه‌ها</a><a href="faq.html">سؤالات متداول</a><a href="contact.html">تماس با من</a><a href="resume-print.html">رزومه قابل چاپ</a><a href="coming-soon.html">به‌زودی</a><a href="404.html">صفحه ۴۰۴</a></div></li></ul>
         <div class="nav-foot"><a href="#consult" class="btn btn-primary"><svg class="icon"><use href="#i-scale"></use></svg>مشاوره حقوقی</a><div class="socials"><a href="#" aria-label="لینکدین"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="تلگرام"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="واتس‌اپ"><svg class="icon"><use href="#i-whatsapp"></use></svg></a><a href="#" aria-label="اینستاگرام"><svg class="icon"><use href="#i-instagram"></use></svg></a></div></div>
       </nav>
@@ -51,7 +50,7 @@
           <h1 data-reveal="up" style="--delay:.1s">از حق شما<br>با <em>قدرت</em> دفاع می‌کنم</h1>
           <p data-reveal="up" style="--delay:.2s">دکتر کاوه بهرامی هستم؛ با بیش از ۱۵ سال تجربه در دعاوی خانواده، کیفری، ملکی و تجاری. هر پرونده برای من یک تعهد است، نه فقط یک شغل.</p>
           <div class="hero-btns" data-reveal="up" style="--delay:.3s"><a href="#consult" class="btn btn-primary"><svg class="icon"><use href="#i-calendar-check"></use></svg>درخواست مشاوره</a><a href="#areas" class="btn btn-outline">حوزه‌های تخصصی</a></div>
-          <div class="law-stats" data-reveal="up" style="--delay:.4s"><div><b>۱۵+</b><span>سال وکالت</span></div><div><b>۱۲۰۰+</b><span>پرونده موفق</span></div><div><b>۹۶٪</b><span>رضایت موکلین</span></div></div>
+          <div class="law-stats" data-reveal="up" style="--delay:.4s"><div><b>۱۵+</b><span>سال وکالت</span></div><div><b>۱٬۲۰۰+</b><span>پرونده موفق</span></div><div><b>۹۶٪</b><span>رضایت موکلین</span></div></div>
         </div>
         <div class="law-hero-visual" data-reveal="zoom">
           <div class="law-frame"><img src="assets/img/photos/p-lawyer.jpg" alt="دکتر کاوه بهرامی" width="800" height="1000"></div>
@@ -76,9 +75,9 @@
           <div class="about-content" data-reveal="end">
             <span class="subtitle">درباره من</span>
             <h2 class="section-title">عدالت، <span class="text-gradient">حق شماست</span></h2>
-            <p>دکترای حقوق خصوصی از دانشگاه شهید بهشتی و عضو کانون وکلای دادگستری مرکز از سال ۱۳۸۹ هستم. در این سال‌ها افتخار داشته‌ام در بیش از ۱۲۰۰ پرونده از حقوق موکلینم دفاع کنم.</p><p>در کنار وکالت، در دانشگاه تدریس می‌کنم و نویسنده دو کتاب در حوزه حقوق قراردادها هستم. باور دارم موکل باید همیشه بداند پرونده‌اش در چه مرحله‌ای است.</p>
+            <p>دکترای حقوق خصوصی از دانشگاه شهید بهشتی و عضو کانون وکلای دادگستری مرکز از سال ۱۳۸۹ هستم. در این سال‌ها افتخار داشته‌ام در بیش از ۱٬۲۰۰ پرونده از حقوق موکلینم دفاع کنم.</p><p>در کنار وکالت، در دانشگاه تدریس می‌کنم و نویسنده دو کتاب در حوزه حقوق قراردادها هستم. باور دارم موکل باید همیشه بداند پرونده‌اش در چه مرحله‌ای است.</p>
             <ul class="info-list"><li><span class="info-ic"><svg class="icon"><use href="#i-scale"></use></svg></span><div><small>پروانه وکالت</small><b>پایه یک دادگستری</b></div></li><li><span class="info-ic"><svg class="icon"><use href="#i-graduation"></use></svg></span><div><small>تحصیلات</small><b>دکترای حقوق خصوصی</b></div></li><li><span class="info-ic"><svg class="icon"><use href="#i-book"></use></svg></span><div><small>تألیفات</small><b>۲ کتاب، ۱۸ مقاله</b></div></li><li><span class="info-ic"><svg class="icon"><use href="#i-map-pin"></use></svg></span><div><small>دفتر</small><b>تهران، سعادت‌آباد</b></div></li></ul>
-            <div class="about-btns"><a href="#consult" class="btn btn-primary"><svg class="icon"><use href="#i-calendar-check"></use></svg>درخواست مشاوره</a><a href="resume-print.html" class="btn btn-outline"><svg class="icon"><use href="#i-download"></use></svg>دانلود رزومه</a></div>
+            <div class="about-btns"><a href="#consult" class="btn btn-primary"><svg class="icon"><use href="#i-calendar-check"></use></svg>درخواست مشاوره</a><a href="resume-print.html" class="btn btn-outline"><svg class="icon"><use href="#i-file"></use></svg>مشاهده رزومه</a></div>
           </div>
         </div>
       </div>
@@ -137,10 +136,10 @@
       <div class="container">
         <div class="contact-grid">
           <div class="contact-info" data-reveal="start"><div class="section-head start"><span class="subtitle">رزرو مشاوره</span><h2 class="section-title">وقت <span class="text-gradient">مشاوره</span> بگیرید</h2><p class="section-desc">پس از ثبت درخواست، دفتر برای هماهنگی زمان با شما تماس می‌گیرد.</p></div>
-            <a href="tel:+982122334455" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-phone"></use></svg></span><div><small>تلفن دفتر</small><b dir="ltr">021 2233 4455</b></div></a><a href="mailto:office@bahrami-law.ir" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-mail"></use></svg></span><div><small>ایمیل</small><b>office@bahrami-law.ir</b></div></a><div class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-map-pin"></use></svg></span><div><small>آدرس دفتر</small><b>تهران، سعادت‌آباد، میدان کاج، برج نگین، طبقه ۷</b></div></div></div>
+            <a href="tel:+982122334455" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-phone"></use></svg></span><div><small>تلفن دفتر</small><b dir="ltr">۰۲۱ ۲۲۳۳ ۴۴۵۵</b></div></a><a href="mailto:office@bahrami-law.ir" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-mail"></use></svg></span><div><small>ایمیل</small><b>office@bahrami-law.ir</b></div></a><div class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-map-pin"></use></svg></span><div><small>آدرس دفتر</small><b>تهران، سعادت‌آباد، میدان کاج، برج نگین، طبقه ۷</b></div></div></div>
           <form class="card contact-form" action="#" method="post" data-validate novalidate data-success="درخواست مشاوره ثبت شد. دفتر به‌زودی با شما تماس می‌گیرد." data-reveal="end">
             <h3>فرم درخواست مشاوره</h3><p>اطلاعات شما کاملاً محرمانه می‌ماند.</p>
-            <div class="form-row"><div class="form-group"><label for="lw-name">نام و نام خانوادگی</label><input class="form-control" id="lw-name" name="name" type="text" placeholder="" required><span class="error-msg">نام را وارد کنید.</span></div><div class="form-group"><label for="lw-phone">شماره تماس</label><input class="form-control" id="lw-phone" name="phone" type="tel" placeholder="۰۹۱۲۰۰۰۰۰۰۰" required><span class="error-msg">شماره تماس را وارد کنید.</span></div></div><div class="form-row"><div class="form-group"><label for="lw-area">حوزه پرونده</label><select class="form-control" id="lw-area" name="area" required><option value="">انتخاب کنید…</option><option>دعاوی خانواده</option><option>دعاوی کیفری</option><option>دعاوی ملکی</option><option>حقوق تجارت</option><option>حقوق کار</option><option>ثبت شرکت و برند</option></select><span class="error-msg">حوزه را انتخاب کنید.</span></div><div class="form-group"><label for="lw-type">نوع مشاوره</label><select class="form-control" id="lw-type" name="type" required><option value="">انتخاب کنید…</option><option>حضوری</option><option>تلفنی</option><option>آنلاین (تصویری)</option></select><span class="error-msg">نوع مشاوره را انتخاب کنید.</span></div></div><div class="form-group"><label for="lw-message">شرح مختصر موضوع</label><textarea class="form-control" id="lw-message" name="message" placeholder="بدون ذکر جزئیات محرمانه، موضوع را توضیح دهید…" minlength="10" required></textarea><span class="error-msg">لطفاً موضوع را بنویسید.</span></div>
+            <div class="form-row"><div class="form-group"><label for="lw-name">نام و نام خانوادگی</label><input class="form-control" id="lw-name" name="name" type="text" placeholder="" required><span class="error-msg">نام را وارد کنید.</span></div><div class="form-group"><label for="lw-phone">شماره تماس</label><input class="form-control" id="lw-phone" name="phone" type="tel" placeholder="۰۹۱۲۰۰۰۰۰۰۰" required dir="ltr"><span class="error-msg">شماره تماس را وارد کنید.</span></div></div><div class="form-row"><div class="form-group"><label for="lw-area">حوزه پرونده</label><select class="form-control" id="lw-area" name="area" required><option value="">انتخاب کنید…</option><option>دعاوی خانواده</option><option>دعاوی کیفری</option><option>دعاوی ملکی</option><option>حقوق تجارت</option><option>حقوق کار</option><option>ثبت شرکت و برند</option></select><span class="error-msg">حوزه را انتخاب کنید.</span></div><div class="form-group"><label for="lw-type">نوع مشاوره</label><select class="form-control" id="lw-type" name="type" required><option value="">انتخاب کنید…</option><option>حضوری</option><option>تلفنی</option><option>آنلاین (تصویری)</option></select><span class="error-msg">نوع مشاوره را انتخاب کنید.</span></div></div><div class="form-group"><label for="lw-message">شرح مختصر موضوع</label><textarea class="form-control" id="lw-message" name="message" placeholder="بدون ذکر جزئیات محرمانه، موضوع را توضیح دهید…" minlength="10" required></textarea><span class="error-msg">لطفاً موضوع را بنویسید.</span></div>
             <button type="submit" class="btn btn-primary"><span class="btn-text">ثبت درخواست <svg class="icon flip-rtl"><use href="#i-send"></use></svg></span></button>
           </form>
         </div>
@@ -153,7 +152,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ب</span><span>بهرامی<span class="logo-dot">.</span></span></a>
+          <a href="home-lawyer.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">ب</span><span>بهرامی<span class="logo-dot">.</span></span></a>
           <p>دفتر وکالت و مشاوره حقوقی دکتر کاوه بهرامی؛ دفاع قاطع، شفاف و متعهد از حقوق شما.</p>
           <div class="socials"><a href="#" aria-label="لینکدین"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="تلگرام"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="واتس‌اپ"><svg class="icon"><use href="#i-whatsapp"></use></svg></a><a href="#" aria-label="اینستاگرام"><svg class="icon"><use href="#i-instagram"></use></svg></a></div>
         </div>
@@ -161,10 +160,10 @@
         <div><h4>صفحات</h4><ul class="footer-links"><li><a href="about.html">درباره من</a></li><li><a href="services.html">خدمات</a></li><li><a href="portfolio.html">نمونه کارها</a></li><li><a href="portfolio-details.html">جزئیات نمونه کار</a></li><li><a href="blog.html">وبلاگ</a></li><li><a href="blog-details.html">جزئیات مقاله</a></li></ul></div>
         <div class="newsletter">
           <h4>در ارتباط باشیم</h4>
-          <ul class="footer-contact"><li><svg class="icon"><use href="#i-phone"></use></svg><span dir="ltr">021 2233 4455</span></li><li><svg class="icon"><use href="#i-map-pin"></use></svg><span>تهران، سعادت‌آباد، برج نگین</span></li></ul>
+          <ul class="footer-contact"><li><svg class="icon"><use href="#i-phone"></use></svg><span dir="ltr">۰۲۱ ۲۲۳۳ ۴۴۵۵</span></li><li><svg class="icon"><use href="#i-map-pin"></use></svg><span>تهران، سعادت‌آباد، برج نگین</span></li></ul>
           <p>عضو خبرنامه شوید تا از تازه‌ها باخبر شوید.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="ایمیل شما" aria-label="ایمیل" dir="ltr">
+          <form class="newsletter-form" novalidate>
+            <input type="email" name="email" autocomplete="email" required placeholder="ایمیل شما" aria-label="ایمیل" dir="ltr">
             <button class="btn btn-primary" type="submit" aria-label="عضویت"><svg class="icon flip-rtl"><use href="#i-send"></use></svg></button>
           </form>
         </div>

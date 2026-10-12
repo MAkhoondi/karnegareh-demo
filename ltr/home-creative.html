@@ -13,23 +13,22 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/demos.css">
   <!-- Apply this page's saved settings early to avoid a colour flash -->
-  <script>try{var p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme-'+p),c=localStorage.getItem('kg-color-'+p);if(t)document.documentElement.setAttribute('data-theme',t);if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme'),c=localStorage.getItem('kg-color-'+p),k=d.getAttribute('data-context')==='inner'&&JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');if(k){c=c||k.color;t=t||k.theme;}if(t)d.setAttribute('data-theme',t);if(c)d.setAttribute('data-color',c);if(sessionStorage.getItem('kg-pl-'+p))d.classList.add('pl-seen');}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="demo-creative">
   <a class="skip-link" href="#main">Skip to main content</a>
-
   <div class="preloader" aria-hidden="true">
-    <div class="preloader-inner"><span class="preloader-brand">Kian<i>.</i></span><span class="preloader-bar"><i></i></span></div>
+    <div class="preloader-inner"><span class="preloader-mark"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/><path d="M5 3v4M19 17v4M3 5h4M17 19h4"/></svg></span><span class="preloader-bar"><i></i></span></div>
   </div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo" aria-label="Home page"><span class="logo-mark">K</span><span>Kian<span class="logo-dot">.</span></span></a>
+      <a href="home-creative.html" class="logo" aria-label="Home page"><span class="logo-mark">K</span><span>Kian<span class="logo-dot">.</span></span></a>
       <nav class="nav" aria-label="Main menu">
-        <div class="nav-head"><a href="index.html" class="logo" aria-label="Home page"><span class="logo-mark">K</span><span>Kian<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="Close menu"><svg class="icon"><use href="#i-close"></use></svg></button></div>
+        <div class="nav-head"><a href="home-creative.html" class="logo" aria-label="Home page"><span class="logo-mark">K</span><span>Kian<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="Close menu"><svg class="icon"><use href="#i-close"></use></svg></button></div>
         <ul class="nav-list"><li><a class="nav-link active" href="#home">Home</a></li><li><a class="nav-link" href="#about">About</a></li><li><a class="nav-link" href="#services">Services</a></li><li><a class="nav-link" href="#portfolio">Portfolio</a></li><li><a class="nav-link" href="#awards">Awards</a></li><li><a class="nav-link" href="#contact">Contact</a></li><li class="has-sub"><a class="nav-link" href="about.html" aria-haspopup="true">Pages <svg class="icon"><use href="#i-chevron-down"></use></svg></a><div class="sub-menu cols-2"><a href="about.html">About me</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="portfolio-details.html">Portfolio details</a><a href="blog.html">Blog</a><a href="blog-details.html">Blog post details</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact me</a><a href="resume-print.html">Printable resume</a><a href="coming-soon.html">Coming soon</a><a href="404.html">404 page</a></div></li></ul>
         <div class="nav-foot"><a href="#contact" class="btn btn-primary"><svg class="icon"><use href="#i-sparkles"></use></svg>Start a project</a><div class="socials"><a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="Dribbble"><svg class="icon"><use href="#i-dribbble"></use></svg></a><a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="X"><svg class="icon"><use href="#i-x"></use></svg></a></div></div>
       </nav>
@@ -52,7 +51,7 @@
         <h1 class="hero-title" data-reveal="up" style="--delay:.15s">I turn ideas into <span class="outline">experiences</span><br>
           that are <span class="rotating-words"><span class="text-gradient">lasting</span><span class="text-gradient">beautiful</span><span class="text-gradient">smart</span><span class="text-gradient">bold</span></span></h1>
         <p class="hero-desc" data-reveal="up" style="--delay:.3s">Hi! I'm <strong>Kian Farahmand</strong>, an art director and motion designer. By combining creativity, storytelling and technology, I build brands that get noticed and stay in people's minds.</p>
-        <div class="hero-btns" data-reveal="up" style="--delay:.45s"><a href="#portfolio" class="btn btn-primary">View my work <svg class="icon icon-move flip-rtl"><use href="#i-arrow-right"></use></svg></a><a href="resume-print.html" class="btn btn-outline"><svg class="icon"><use href="#i-download"></use></svg>Download resume</a></div>
+        <div class="hero-btns" data-reveal="up" style="--delay:.45s"><a href="#portfolio" class="btn btn-primary">View my work <svg class="icon icon-move flip-rtl"><use href="#i-arrow-right"></use></svg></a><a href="resume-print.html" class="btn btn-outline"><svg class="icon"><use href="#i-file"></use></svg>View resume</a></div>
         <div class="hero-social" data-reveal="up" style="--delay:.6s"><div class="socials"><a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="Dribbble"><svg class="icon"><use href="#i-dribbble"></use></svg></a><a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="X"><svg class="icon"><use href="#i-x"></use></svg></a><a href="#" aria-label="Telegram"><svg class="icon"><use href="#i-telegram"></use></svg></a></div></div>
       </div></div>
       <a href="#about" class="scroll-down" aria-label="Scroll down"><span class="mouse"></span>Scroll down</a>
@@ -70,7 +69,7 @@
             <h2 class="section-title">Creativity, <span class="text-gradient">storytelling</span> and a little magic</h2>
             <p>For 10 years I have been creating ideas for Iranian and international brands, from advertising campaigns and motion graphics to visual identities and interactive experiences. For me every project is a story that has to be told well.</p><p>Alongside client work I teach at the University of Art, and I love testing bold ideas in my personal projects.</p>
             <ul class="info-list"><li><span class="info-ic"><svg class="icon"><use href="#i-briefcase"></use></svg></span><div><small>Current role</small><b>Art Director, Ava Studio</b></div></li><li><span class="info-ic"><svg class="icon"><use href="#i-map-pin"></use></svg></span><div><small>City</small><b>Isfahan, Iran</b></div></li><li><span class="info-ic"><svg class="icon"><use href="#i-mail"></use></svg></span><div><small>Email</small><b>hi@kian.studio</b></div></li><li><span class="info-ic"><svg class="icon"><use href="#i-globe"></use></svg></span><div><small>Website</small><b dir="ltr">kian.studio</b></div></li></ul>
-            <div class="about-btns"><a href="resume-print.html" class="btn btn-primary"><svg class="icon"><use href="#i-download"></use></svg>Full resume</a><a href="#contact" class="btn btn-outline"><svg class="icon"><use href="#i-message"></use></svg>Get in touch</a></div>
+            <div class="about-btns"><a href="resume-print.html" class="btn btn-primary"><svg class="icon"><use href="#i-file"></use></svg>Full resume</a><a href="#contact" class="btn btn-outline"><svg class="icon"><use href="#i-message"></use></svg>Get in touch</a></div>
           </div>
         </div>
       </div>
@@ -180,7 +179,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <a href="index.html" class="logo" aria-label="Home page"><span class="logo-mark">K</span><span>Kian<span class="logo-dot">.</span></span></a>
+          <a href="home-creative.html" class="logo" aria-label="Home page"><span class="logo-mark">K</span><span>Kian<span class="logo-dot">.</span></span></a>
           <p>Art director and motion designer, creating visual stories for brands that want to stand out.</p>
           <div class="socials"><a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="Dribbble"><svg class="icon"><use href="#i-dribbble"></use></svg></a><a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="X"><svg class="icon"><use href="#i-x"></use></svg></a></div>
         </div>
@@ -190,8 +189,8 @@
           <h4>Stay in touch</h4>
           
           <p>Subscribe to the newsletter to hear about what's new.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Your email" aria-label="Email" dir="ltr">
+          <form class="newsletter-form" novalidate>
+            <input type="email" name="email" autocomplete="email" required placeholder="Your email" aria-label="Email" dir="ltr">
             <button class="btn btn-primary" type="submit" aria-label="Subscribe"><svg class="icon flip-rtl"><use href="#i-send"></use></svg></button>
           </form>
         </div>

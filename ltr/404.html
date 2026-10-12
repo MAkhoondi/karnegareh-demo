@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark" data-color="violet" class="no-js">
+<html data-context="inner" lang="en" dir="ltr" data-theme="dark" data-color="violet" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/demos.css">
   <!-- Apply this page's saved settings early to avoid a colour flash -->
-  <script>try{var p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme-'+p),c=localStorage.getItem('kg-color-'+p);if(t)document.documentElement.setAttribute('data-theme',t);if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme'),c=localStorage.getItem('kg-color-'+p),k=d.getAttribute('data-context')==='inner'&&JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');if(k){c=c||k.color;t=t||k.theme;}if(t)d.setAttribute('data-theme',t);if(c)d.setAttribute('data-color',c);if(sessionStorage.getItem('kg-pl-'+p))d.classList.add('pl-seen');}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -27,7 +27,7 @@
       <h1>Oops! This page could not be found</h1>
       <p>It looks like the page you are looking for has been moved, deleted or never existed.</p>
       <div class="hero-btns" style="justify-content:center">
-        <a href="index.html" class="btn btn-primary"><svg class="icon"><use href="#i-home"></use></svg>Back to home</a>
+        <a href="home-developer.html" class="btn btn-primary"><svg class="icon"><use href="#i-home"></use></svg>Back to home</a>
         <a href="contact.html" class="btn btn-outline"><svg class="icon"><use href="#i-message"></use></svg>Report a problem</a>
       </div>
     </div>

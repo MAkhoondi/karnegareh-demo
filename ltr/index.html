@@ -13,16 +13,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/demos.css">
   <!-- Apply this page's saved settings early to avoid a colour flash -->
-  <script>try{var p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme-'+p),c=localStorage.getItem('kg-color-'+p);if(t)document.documentElement.setAttribute('data-theme',t);if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme'),c=localStorage.getItem('kg-color-'+p),k=d.getAttribute('data-context')==='inner'&&JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');if(k){c=c||k.color;t=t||k.theme;}if(t)d.setAttribute('data-theme',t);if(c)d.setAttribute('data-color',c);if(sessionStorage.getItem('kg-pl-'+p))d.classList.add('pl-seen');}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="landing">
   <a class="skip-link" href="#main">Skip to main content</a>
-
-  <div class="preloader" aria-hidden="true">
-    <div class="preloader-inner"><span class="preloader-brand">Karnegareh<i>.</i></span><span class="preloader-bar"><i></i></span></div>
-  </div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="header lp-header"><div class="container">
@@ -50,25 +46,25 @@
             <div class="lp-demo-info"><span class="lp-num">02</span><b>Designer (business card)</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-creative.html" class="lp-demo" data-reveal="up" style="--delay:0.2s">
             <div class="lp-shot"><img src="assets/img/demos/home-creative.jpg" alt="Creative & artistic demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">03</span><b>Creative & artistic</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-photographer.html" class="lp-demo" data-reveal="up">
-            <div class="lp-shot"><img src="assets/img/demos/home-photographer.jpg" alt="Photographer demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-photographer.jpg" alt="Photographer demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">04</span><b>Photographer</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-doctor.html" class="lp-demo" data-reveal="up" style="--delay:0.1s">
-            <div class="lp-shot"><img src="assets/img/demos/home-doctor.jpg" alt="Doctor demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-doctor.jpg" alt="Doctor demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">05</span><b>Doctor</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-lawyer.html" class="lp-demo" data-reveal="up" style="--delay:0.2s">
-            <div class="lp-shot"><img src="assets/img/demos/home-lawyer.jpg" alt="Lawyer demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-lawyer.jpg" alt="Lawyer demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">06</span><b>Lawyer</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-teacher.html" class="lp-demo" data-reveal="up">
-            <div class="lp-shot"><img src="assets/img/demos/home-teacher.jpg" alt="Teacher demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-teacher.jpg" alt="Teacher demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">07</span><b>Teacher</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-architect.html" class="lp-demo" data-reveal="up" style="--delay:0.1s">
-            <div class="lp-shot"><img src="assets/img/demos/home-architect.jpg" alt="Architect demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-architect.jpg" alt="Architect demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">08</span><b>Architect</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-writer.html" class="lp-demo" data-reveal="up" style="--delay:0.2s">
-            <div class="lp-shot"><img src="assets/img/demos/home-writer.jpg" alt="Writer demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-writer.jpg" alt="Writer demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">09</span><b>Writer</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-coach.html" class="lp-demo" data-reveal="up">
-            <div class="lp-shot"><img src="assets/img/demos/home-coach.jpg" alt="Fitness coach demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-coach.jpg" alt="Fitness coach demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">10</span><b>Fitness coach</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-consultant.html" class="lp-demo" data-reveal="up" style="--delay:0.1s">
-            <div class="lp-shot"><img src="assets/img/demos/home-consultant.jpg" alt="Business consultant demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-consultant.jpg" alt="Business consultant demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">11</span><b>Business consultant</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-student.html" class="lp-demo" data-reveal="up" style="--delay:0.2s">
-            <div class="lp-shot"><img src="assets/img/demos/home-student.jpg" alt="Student & job seeker demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-student.jpg" alt="Student & job seeker demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">12</span><b>Student & job seeker</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a><a href="home-chef.html" class="lp-demo" data-reveal="up">
-            <div class="lp-shot"><img src="assets/img/demos/home-chef.jpg" alt="Chef demo" width="1200" height="760" loading="lazy"><span class="lp-new">New</span></div>
+            <div class="lp-shot"><img src="assets/img/demos/home-chef.jpg" alt="Chef demo" width="1200" height="760" loading="lazy"></div>
             <div class="lp-demo-info"><span class="lp-num">13</span><b>Chef</b><svg class="icon flip-rtl"><use href="#i-arrow-right"></use></svg></div></a></div>
     </div></section>
     <section class="section section-alt" id="pages"><div class="container">

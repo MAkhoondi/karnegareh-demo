@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark" data-color="violet" class="no-js">
+<html data-context="inner" lang="en" dir="ltr" data-theme="dark" data-color="violet" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/demos.css">
   <!-- Apply this page's saved settings early to avoid a colour flash -->
-  <script>try{var p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme-'+p),c=localStorage.getItem('kg-color-'+p);if(t)document.documentElement.setAttribute('data-theme',t);if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme'),c=localStorage.getItem('kg-color-'+p),k=d.getAttribute('data-context')==='inner'&&JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');if(k){c=c||k.color;t=t||k.theme;}if(t)d.setAttribute('data-theme',t);if(c)d.setAttribute('data-color',c);if(sessionStorage.getItem('kg-pl-'+p))d.classList.add('pl-seen');}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -23,14 +23,14 @@
   <main class="coming" id="main">
     <div class="fx-bg" style="background-image:url(assets/img/photos/desk-7.jpg)"></div>
     <div class="coming-inner">
-      <a href="index.html" class="logo" aria-label="Home page"><span class="logo-mark">A</span><span>Arash<span class="logo-dot">.</span></span></a>
+      <a href="home-developer.html" class="logo" aria-label="Home page"><span class="logo-mark">A</span><span>Arash<span class="logo-dot">.</span></span></a>
       <span class="subtitle" data-reveal="up">Under construction</span>
       <h1 data-reveal="up">Something <span class="text-gradient">amazing</span><br>is on its way</h1>
       <p data-reveal="up">I'm getting my new website ready with more features. Leave your email and be the first to know.</p>
       <div class="countdown" data-countdown="45" data-reveal="up">
         <div><b data-days>0</b><span>Days</span></div><div><b data-hours>0</b><span>Hours</span></div><div><b data-minutes>0</b><span>Minutes</span></div><div><b data-seconds>0</b><span>Seconds</span></div>
       </div>
-      <form class="newsletter-form" data-reveal="up"><input type="email" placeholder="Your email" aria-label="Email" dir="ltr"><button class="btn btn-primary" type="submit">Notify me</button></form>
+      <form class="newsletter-form" data-reveal="up" novalidate><input type="email" name="email" autocomplete="email" required placeholder="Your email" aria-label="Email" dir="ltr"><button class="btn btn-primary" type="submit">Notify me</button></form>
       <div class="socials"><a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="GitHub"><svg class="icon"><use href="#i-github"></use></svg></a><a href="#" aria-label="Telegram"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"></use></svg></a></div>
     </div>
   </main>

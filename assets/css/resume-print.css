@@ -51,7 +51,7 @@
 .cv-head p { margin-top: 3mm; }
 .cv-section { margin-bottom: 6mm; }
 .cv-section > h2 { display: flex; align-items: center; gap: 2.6mm; font-size: 12.5pt; margin-bottom: 3.4mm; }
-.cv-section > h2 .icon { width: 7.6mm; height: 7.6mm; padding: 1.6mm; border-radius: 2.4mm; background: var(--gradient); color: #fff; }
+.cv-section > h2 .icon { width: 7.6mm; height: 7.6mm; padding: 1.6mm; border-radius: 2.4mm; background: var(--gradient); color: var(--on-primary); }
 .cv-item { position: relative; padding-inline-start: 5mm; margin-bottom: 3.6mm; }
 .cv-item::before { content: ""; position: absolute; inset-inline-start: 0; top: 2.2mm; width: 2mm; height: 2mm; border-radius: 50%; background: var(--primary); }
 .cv-item::after { content: ""; position: absolute; inset-inline-start: .85mm; top: 5mm; bottom: -3.4mm; width: .3mm; background: var(--line); }
@@ -59,12 +59,15 @@
 .cv-item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
 .cv-item h4 { font-size: 10.5pt; }
 .cv-item .date { font-size: 8.4pt; font-weight: 700; color: var(--primary); white-space: nowrap; }
-.cv-item .place { display: block; font-size: 8.8pt; font-weight: 600; color: #8a90a6; margin-bottom: .6mm; }
+.cv-item .place { display: block; font-size: 8.8pt; font-weight: 600; color: var(--muted); margin-bottom: .6mm; }
 .cv-item p { font-size: 9pt; }
 .cv-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
 .cv-award { padding: 3mm; border: 1px solid var(--line); border-radius: 3mm; }
 .cv-award h4 { font-size: 9.6pt; }
 .cv-award p { font-size: 8.6pt; }
+
+/* پیش‌نمایش روی صفحه‌های بزرگ کمی بزرگ‌تر نمایش داده می‌شود تا متن‌های ریز برگه A4 خوانا باشند (چاپ تغییری نمی‌کند) */
+@media screen and (min-width: 1100px) { .sheet { zoom: 1.15; } }
 
 @media (max-width: 860px) {
   .sheet { width: 100%; min-height: auto; grid-template-columns: 1fr; }

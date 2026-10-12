@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="light" data-color="violet" class="no-js">
+<html data-context="inner" lang="en" dir="ltr" data-theme="light" data-color="violet" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/resume-print.css">
-  <script>try{var c=localStorage.getItem("kg-color-resume-print.html");if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,c=localStorage.getItem('kg-color-resume-print.html'),k=JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');c=c||(k&&k.color);if(c)d.setAttribute('data-color',c);}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -16,7 +16,7 @@
   <div class="print-page">
     <!-- Toolbar (hidden when printing) -->
     <div class="print-toolbar">
-      <a href="index.html" class="btn btn-outline btn-sm"><svg class="icon flip-rtl"><use href="#i-arrow-left"></use></svg>Back to the site</a>
+      <a href="home-developer.html" class="btn btn-outline btn-sm"><svg class="icon flip-rtl"><use href="#i-arrow-left"></use></svg>Back to the site</a>
       <div class="tb-actions">
         <span class="hint">Tip: in the print dialog, choose “Save as PDF” and enable “Background graphics”.</span>
         <button class="btn btn-primary btn-sm" data-print><svg class="icon"><use href="#i-printer"></use></svg>Print / Download PDF</button>
@@ -75,12 +75,12 @@
             <p>Led a team of six, designed a micro-frontend architecture and cut the main product's load time by 40%.</p>
           </div>
           <div class="cv-item">
-            <div class="cv-item-head"><h4>Senior React Developer</h4><span class="date">1398 - 1401</span></div>
+            <div class="cv-item-head"><h4>Senior React Developer</h4><span class="date">2019 - 2022</span></div>
             <span class="place">DigiPay startup</span>
             <p>Built a financial dashboard for more than 2 million active users and implemented a custom design system.</p>
           </div>
           <div class="cv-item">
-            <div class="cv-item-head"><h4>UI Designer & Web Developer</h4><span class="date">1396 - 1398</span></div>
+            <div class="cv-item-head"><h4>UI Designer & Web Developer</h4><span class="date">2017 - 2019</span></div>
             <span class="place">Rangin Kaman Creative Agency</span>
             <p>Designed and built more than 40 corporate and e-commerce websites for local and international clients.</p>
           </div>
@@ -89,11 +89,11 @@
         <section class="cv-section">
           <h2><svg class="icon"><use href="#i-graduation"></use></svg>Education</h2>
           <div class="cv-item">
-            <div class="cv-item-head"><h4>M.Sc. in Software Engineering</h4><span class="date">1395 - 1397</span></div>
+            <div class="cv-item-head"><h4>M.Sc. in Software Engineering</h4><span class="date">2016 - 2018</span></div>
             <span class="place">Sharif University of Technology</span>
           </div>
           <div class="cv-item">
-            <div class="cv-item-head"><h4>B.Sc. in Computer Engineering</h4><span class="date">1391 - 1395</span></div>
+            <div class="cv-item-head"><h4>B.Sc. in Computer Engineering</h4><span class="date">2012 - 2016</span></div>
             <span class="place">University of Tehran</span>
           </div>
         </section>

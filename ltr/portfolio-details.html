@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark" data-color="violet" class="no-js">
+<html data-context="inner" lang="en" dir="ltr" data-theme="dark" data-color="violet" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,29 +13,25 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/demos.css">
   <!-- Apply this page's saved settings early to avoid a colour flash -->
-  <script>try{var p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme-'+p),c=localStorage.getItem('kg-color-'+p);if(t)document.documentElement.setAttribute('data-theme',t);if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme'),c=localStorage.getItem('kg-color-'+p),k=d.getAttribute('data-context')==='inner'&&JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');if(k){c=c||k.color;t=t||k.theme;}if(t)d.setAttribute('data-theme',t);if(c)d.setAttribute('data-color',c);if(sessionStorage.getItem('kg-pl-'+p))d.classList.add('pl-seen');}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to main content</a>
-
-  <div class="preloader" aria-hidden="true">
-    <div class="preloader-inner"><span class="preloader-brand">Arash<i>.</i></span><span class="preloader-bar"><i></i></span></div>
-  </div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo" aria-label="Home page"><span class="logo-mark">A</span><span>Arash<span class="logo-dot">.</span></span></a>
+      <a href="home-developer.html" class="logo" aria-label="Home page"><span class="logo-mark">A</span><span>Arash<span class="logo-dot">.</span></span></a>
       <nav class="nav" aria-label="Main menu">
-        <div class="nav-head"><a href="index.html" class="logo" aria-label="Home page"><span class="logo-mark">A</span><span>Arash<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="Close menu"><svg class="icon"><use href="#i-close"></use></svg></button></div>
+        <div class="nav-head"><a href="home-developer.html" class="logo" aria-label="Home page"><span class="logo-mark">A</span><span>Arash<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="Close menu"><svg class="icon"><use href="#i-close"></use></svg></button></div>
         <ul class="nav-list"><li><a class="nav-link" href="home-developer.html">Home</a></li><li><a class="nav-link" href="about.html">About me</a></li><li><a class="nav-link" href="services.html">Services</a></li><li><a class="nav-link" href="portfolio.html">Portfolio</a></li><li><a class="nav-link" href="blog.html">Blog</a></li><li><a class="nav-link" href="contact.html">Contact</a></li><li class="has-sub"><a class="nav-link" href="about.html" aria-haspopup="true">Pages <svg class="icon"><use href="#i-chevron-down"></use></svg></a><div class="sub-menu cols-2"><a href="about.html">About me</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="portfolio-details.html" class="active">Portfolio details</a><a href="blog.html">Blog</a><a href="blog-details.html">Blog post details</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact me</a><a href="resume-print.html">Printable resume</a><a href="coming-soon.html">Coming soon</a><a href="404.html">404 page</a></div></li></ul>
-        <div class="nav-foot"><a href="resume-print.html" class="btn btn-primary"><svg class="icon"><use href="#i-download"></use></svg>My resume</a><div class="socials"><a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="GitHub"><svg class="icon"><use href="#i-github"></use></svg></a><a href="#" aria-label="Telegram"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"></use></svg></a></div></div>
+        <div class="nav-foot"><a href="resume-print.html" class="btn btn-primary"><svg class="icon"><use href="#i-file"></use></svg>My resume</a><div class="socials"><a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="GitHub"><svg class="icon"><use href="#i-github"></use></svg></a><a href="#" aria-label="Telegram"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"></use></svg></a></div></div>
       </nav>
       <div class="header-actions">
         <button class="icon-btn theme-toggle" aria-label="Toggle light and dark mode"><svg class="icon i-moon"><use href="#i-moon"></use></svg><svg class="icon i-sun"><use href="#i-sun"></use></svg></button>
-        <a href="resume-print.html" class="btn btn-primary btn-sm btn-cv"><svg class="icon"><use href="#i-download"></use></svg>My resume</a>
+        <a href="resume-print.html" class="btn btn-primary btn-sm btn-cv"><svg class="icon"><use href="#i-file"></use></svg>My resume</a>
         <button class="icon-btn menu-toggle" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"></use></svg></button>
       </div>
     </div>
@@ -142,7 +138,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <a href="index.html" class="logo" aria-label="Home page"><span class="logo-mark">A</span><span>Arash<span class="logo-dot">.</span></span></a>
+          <a href="home-developer.html" class="logo" aria-label="Home page"><span class="logo-mark">A</span><span>Arash<span class="logo-dot">.</span></span></a>
           <p>Front-end developer and UI designer. Building beautiful, useful digital experiences is both my job and my passion.</p>
           <div class="socials"><a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a><a href="#" aria-label="GitHub"><svg class="icon"><use href="#i-github"></use></svg></a><a href="#" aria-label="Telegram"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"></use></svg></a></div>
         </div>
@@ -152,8 +148,8 @@
           <h4>Stay in touch</h4>
           
           <p>Subscribe to the newsletter to hear about what's new.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Your email" aria-label="Email" dir="ltr">
+          <form class="newsletter-form" novalidate>
+            <input type="email" name="email" autocomplete="email" required placeholder="Your email" aria-label="Email" dir="ltr">
             <button class="btn btn-primary" type="submit" aria-label="Subscribe"><svg class="icon flip-rtl"><use href="#i-send"></use></svg></button>
           </form>
         </div>

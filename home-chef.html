@@ -13,23 +13,22 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/demos.css">
   <!-- اعمال سریع تنظیمات ذخیره‌شده همین صفحه برای جلوگیری از پرش رنگ -->
-  <script>try{var p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme-'+p),c=localStorage.getItem('kg-color-'+p);if(t)document.documentElement.setAttribute('data-theme',t);if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,p=location.pathname.split('/').pop()||'index.html',t=localStorage.getItem('kg-theme'),c=localStorage.getItem('kg-color-'+p),k=d.getAttribute('data-context')==='inner'&&JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');if(k){c=c||k.color;t=t||k.theme;}if(t)d.setAttribute('data-theme',t);if(c)d.setAttribute('data-color',c);if(sessionStorage.getItem('kg-pl-'+p))d.classList.add('pl-seen');}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="demo-chef font-naskh">
   <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
-
   <div class="preloader" aria-hidden="true">
-    <div class="preloader-inner"><span class="preloader-brand">سفره<i>.</i></span><span class="preloader-bar"><i></i></span></div>
+    <div class="preloader-inner"><span class="preloader-mark"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.46.32-.84.73-1.04a4 4 0 0 0-2.14-7.59 5 5 0 0 0-9.18 0 4 4 0 0 0-2.14 7.59c.41.2.73.58.73 1.04V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg></span><span class="preloader-bar"><i></i></span></div>
   </div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">د</span><span>سفره<span class="logo-dot">.</span></span></a>
+      <a href="home-chef.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">س</span><span>سفره<span class="logo-dot">.</span></span></a>
       <nav class="nav" aria-label="منوی اصلی">
-        <div class="nav-head"><a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">د</span><span>سفره<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="بستن منو"><svg class="icon"><use href="#i-close"></use></svg></button></div>
+        <div class="nav-head"><a href="home-chef.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">س</span><span>سفره<span class="logo-dot">.</span></span></a><button class="icon-btn nav-close" aria-label="بستن منو"><svg class="icon"><use href="#i-close"></use></svg></button></div>
         <ul class="nav-list"><li><a class="nav-link active" href="#home">خانه</a></li><li><a class="nav-link" href="#about">داستان من</a></li><li><a class="nav-link" href="#menu">منو</a></li><li><a class="nav-link" href="#tasting">میز سرآشپز</a></li><li><a class="nav-link" href="#services">خدمات</a></li><li><a class="nav-link" href="#reserve">رزرو</a></li><li class="has-sub"><a class="nav-link" href="about.html" aria-haspopup="true">صفحات <svg class="icon"><use href="#i-chevron-down"></use></svg></a><div class="sub-menu cols-2"><a href="about.html">درباره من</a><a href="services.html">خدمات</a><a href="portfolio.html">نمونه کارها</a><a href="portfolio-details.html">جزئیات نمونه کار</a><a href="blog.html">وبلاگ</a><a href="blog-details.html">جزئیات مقاله</a><a href="pricing.html">تعرفه‌ها</a><a href="faq.html">سؤالات متداول</a><a href="contact.html">تماس با من</a><a href="resume-print.html">رزومه قابل چاپ</a><a href="coming-soon.html">به‌زودی</a><a href="404.html">صفحه ۴۰۴</a></div></li></ul>
         <div class="nav-foot"><a href="#reserve" class="btn btn-primary"><svg class="icon"><use href="#i-utensils"></use></svg>رزرو میز</a><div class="socials"><a href="#" aria-label="اینستاگرام"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="تلگرام"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="واتس‌اپ"><svg class="icon"><use href="#i-whatsapp"></use></svg></a></div></div>
       </nav>
@@ -54,7 +53,7 @@
           <ul class="ck-hero-info" data-reveal="up" style="--delay:.4s">
             <li><svg class="icon"><use href="#i-clock"></use></svg><div><small>ساعات سرو</small><b>هر روز ۱۲ تا ۲۴</b></div></li>
             <li><svg class="icon"><use href="#i-map-pin"></use></svg><div><small>آدرس</small><b>تهران، فرمانیه</b></div></li>
-            <li><svg class="icon"><use href="#i-star"></use></svg><div><small>امتیاز مهمانان</small><b>۴٫۹ از ۲۴۰۰ نظر</b></div></li>
+            <li><svg class="icon"><use href="#i-star"></use></svg><div><small>امتیاز مهمانان</small><b>۴٫۹ از ۵ (۲٬۴۰۰ نظر)</b></div></li>
           </ul>
         </div>
         <div class="ck-hero-plate" data-reveal="zoom">
@@ -224,10 +223,10 @@
         <div class="contact-grid">
           <div class="contact-info" data-reveal="start"><div class="section-head start"><span class="subtitle">رزرو</span><h2 class="section-title">میز خود را <span class="text-gradient">رزرو کنید</span></h2><p class="section-desc">برای آخر هفته‌ها حداقل سه روز زودتر رزرو کنید. میزها تا ۱۵ دقیقه بعد از ساعت رزرو نگه داشته می‌شوند.</p></div>
             <div class="card ck-hours"><h3><svg class="icon"><use href="#i-clock"></use></svg>ساعات سرو</h3><ul><li><span>شنبه تا چهارشنبه</span><b>۱۲:۰۰ تا ۲۳:۰۰</b></li><li><span>پنجشنبه و جمعه</span><b>۱۲:۰۰ تا ۲۴:۰۰</b></li><li><span>میز سرآشپز</span><b>پنجشنبه و جمعه ۲۰:۳۰</b></li></ul></div>
-            <a href="tel:+982122773344" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-phone"></use></svg></span><div><small>تلفن رزرو</small><b dir="ltr">021 2277 3344</b></div></a><div class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-map-pin"></use></svg></span><div><small>رستوران سفره</small><b>تهران، فرمانیه، خیابان دیباجی، پلاک ۲۱</b></div></div></div>
+            <a href="tel:+982122773344" class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-phone"></use></svg></span><div><small>تلفن رزرو</small><b dir="ltr">۰۲۱ ۲۲۷۷ ۳۳۴۴</b></div></a><div class="card contact-item"><span class="ci-icon"><svg class="icon"><use href="#i-map-pin"></use></svg></span><div><small>رستوران سفره</small><b>تهران، فرمانیه، خیابان دیباجی، پلاک ۲۱</b></div></div></div>
           <form class="card contact-form" action="#" method="post" data-validate novalidate data-success="رزرو شما ثبت شد! پیامک تأیید به‌زودی ارسال می‌شود." data-reveal="end">
             <h3>فرم رزرو میز</h3><p>تأیید رزرو پیامک می‌شود.</p>
-            <div class="form-row"><div class="form-group"><label for="rs-name">نام و نام خانوادگی</label><input class="form-control" id="rs-name" name="name" type="text" placeholder="مثلاً: علی محمدی" required><span class="error-msg">نام را وارد کنید.</span></div><div class="form-group"><label for="rs-phone">شماره موبایل</label><input class="form-control" id="rs-phone" name="phone" type="tel" placeholder="۰۹۱۲۰۰۰۰۰۰۰" required><span class="error-msg">شماره را وارد کنید.</span></div></div><div class="form-row"><div class="form-group"><label for="rs-day">روز</label><select class="form-control" id="rs-day" name="day" required><option value="">انتخاب کنید…</option><option>شنبه</option><option>یکشنبه</option><option>دوشنبه</option><option>سه‌شنبه</option><option>چهارشنبه</option><option>پنجشنبه</option><option>جمعه</option></select><span class="error-msg">روز را انتخاب کنید.</span></div><div class="form-group"><label for="rs-guests">تعداد مهمان</label><select class="form-control" id="rs-guests" name="guests" required><option value="">انتخاب کنید…</option><option>۲ نفر</option><option>۳ تا ۴ نفر</option><option>۵ تا ۸ نفر</option><option>بیش از ۸ نفر</option></select><span class="error-msg">تعداد را انتخاب کنید.</span></div></div><div class="form-row"><div class="form-group"><label for="rs-time">ساعت</label><select class="form-control" id="rs-time" name="time" required><option value="">انتخاب کنید…</option><option>۱۳:۰۰ ناهار</option><option>۱۴:۳۰ ناهار</option><option>۲۰:۰۰ شام</option><option>۲۱:۳۰ شام</option><option>۲۰:۳۰ میز سرآشپز</option></select><span class="error-msg">ساعت را انتخاب کنید.</span></div><div class="form-group"><label for="rs-area">محل نشستن</label><select class="form-control" id="rs-area" name="area"><option value="">فرقی ندارد</option><option>سالن اصلی</option><option>حیاط سرپوشیده</option><option>کنار آشپزخانه باز</option></select></div></div><div class="form-group"><label for="rs-note">درخواست ویژه <small>(اختیاری)</small></label><textarea class="form-control" id="rs-note" name="note" placeholder="مثلاً: جشن تولد، رژیم غذایی خاص…" minlength="0"></textarea></div>
+            <div class="form-row"><div class="form-group"><label for="rs-name">نام و نام خانوادگی</label><input class="form-control" id="rs-name" name="name" type="text" placeholder="مثلاً: علی محمدی" required><span class="error-msg">نام را وارد کنید.</span></div><div class="form-group"><label for="rs-phone">شماره موبایل</label><input class="form-control" id="rs-phone" name="phone" type="tel" placeholder="۰۹۱۲۰۰۰۰۰۰۰" required dir="ltr"><span class="error-msg">شماره را وارد کنید.</span></div></div><div class="form-row"><div class="form-group"><label for="rs-day">روز</label><select class="form-control" id="rs-day" name="day" required><option value="">انتخاب کنید…</option><option>شنبه</option><option>یکشنبه</option><option>دوشنبه</option><option>سه‌شنبه</option><option>چهارشنبه</option><option>پنجشنبه</option><option>جمعه</option></select><span class="error-msg">روز را انتخاب کنید.</span></div><div class="form-group"><label for="rs-guests">تعداد مهمان</label><select class="form-control" id="rs-guests" name="guests" required><option value="">انتخاب کنید…</option><option>۲ نفر</option><option>۳ تا ۴ نفر</option><option>۵ تا ۸ نفر</option><option>بیش از ۸ نفر</option></select><span class="error-msg">تعداد را انتخاب کنید.</span></div></div><div class="form-row"><div class="form-group"><label for="rs-time">ساعت</label><select class="form-control" id="rs-time" name="time" required><option value="">انتخاب کنید…</option><option>۱۳:۰۰ ناهار</option><option>۱۴:۳۰ ناهار</option><option>۲۰:۰۰ شام</option><option>۲۱:۳۰ شام</option><option>۲۰:۳۰ میز سرآشپز</option></select><span class="error-msg">ساعت را انتخاب کنید.</span></div><div class="form-group"><label for="rs-area">محل نشستن</label><select class="form-control" id="rs-area" name="area"><option value="">فرقی ندارد</option><option>سالن اصلی</option><option>حیاط سرپوشیده</option><option>کنار آشپزخانه باز</option></select></div></div><div class="form-group"><label for="rs-note">درخواست ویژه <small>(اختیاری)</small></label><textarea class="form-control" id="rs-note" name="note" placeholder="مثلاً: جشن تولد، رژیم غذایی خاص…" minlength="0"></textarea></div>
             <button type="submit" class="btn btn-primary"><span class="btn-text">ثبت رزرو <svg class="icon flip-rtl"><use href="#i-send"></use></svg></span></button>
           </form>
         </div>
@@ -240,7 +239,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <a href="index.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">د</span><span>سفره<span class="logo-dot">.</span></span></a>
+          <a href="home-chef.html" class="logo" aria-label="صفحه اصلی"><span class="logo-mark">س</span><span>سفره<span class="logo-dot">.</span></span></a>
           <p>رستوران سفره به سرآشپزی داوود صدر؛ طعم اصیل ایرانی با نگاهی تازه.</p>
           <div class="socials"><a href="#" aria-label="اینستاگرام"><svg class="icon"><use href="#i-instagram"></use></svg></a><a href="#" aria-label="تلگرام"><svg class="icon"><use href="#i-telegram"></use></svg></a><a href="#" aria-label="واتس‌اپ"><svg class="icon"><use href="#i-whatsapp"></use></svg></a></div>
         </div>
@@ -248,10 +247,10 @@
         <div><h4>صفحات</h4><ul class="footer-links"><li><a href="about.html">درباره من</a></li><li><a href="services.html">خدمات</a></li><li><a href="portfolio.html">نمونه کارها</a></li><li><a href="portfolio-details.html">جزئیات نمونه کار</a></li><li><a href="blog.html">وبلاگ</a></li><li><a href="blog-details.html">جزئیات مقاله</a></li></ul></div>
         <div class="newsletter">
           <h4>در ارتباط باشیم</h4>
-          <ul class="footer-contact"><li><svg class="icon"><use href="#i-phone"></use></svg><span dir="ltr">021 2277 3344</span></li><li><svg class="icon"><use href="#i-map-pin"></use></svg><span>تهران، فرمانیه، خیابان دیباجی</span></li></ul>
+          <ul class="footer-contact"><li><svg class="icon"><use href="#i-phone"></use></svg><span dir="ltr">۰۲۱ ۲۲۷۷ ۳۳۴۴</span></li><li><svg class="icon"><use href="#i-map-pin"></use></svg><span>تهران، فرمانیه، خیابان دیباجی</span></li></ul>
           <p>عضو خبرنامه شوید تا از تازه‌ها باخبر شوید.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="ایمیل شما" aria-label="ایمیل" dir="ltr">
+          <form class="newsletter-form" novalidate>
+            <input type="email" name="email" autocomplete="email" required placeholder="ایمیل شما" aria-label="ایمیل" dir="ltr">
             <button class="btn btn-primary" type="submit" aria-label="عضویت"><svg class="icon flip-rtl"><use href="#i-send"></use></svg></button>
           </form>
         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" data-theme="light" data-color="violet" class="no-js">
+<html data-context="inner" lang="fa" dir="rtl" data-theme="light" data-color="violet" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/resume-print.css">
-  <script>try{var c=localStorage.getItem("kg-color-resume-print.html");if(c)document.documentElement.setAttribute('data-color',c);}catch(e){}</script>
+  <script>try{var d=document.documentElement,c=localStorage.getItem('kg-color-resume-print.html'),k=JSON.parse(sessionStorage.getItem('kg-demo-'+d.dir)||'null');c=c||(k&&k.color);if(c)d.setAttribute('data-color',c);}catch(e){}</script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -16,7 +16,7 @@
   <div class="print-page">
     <!-- نوار ابزار (هنگام چاپ مخفی می‌شود) -->
     <div class="print-toolbar">
-      <a href="index.html" class="btn btn-outline btn-sm"><svg class="icon flip-rtl"><use href="#i-arrow-left"></use></svg>بازگشت به سایت</a>
+      <a href="home-developer.html" class="btn btn-outline btn-sm"><svg class="icon flip-rtl"><use href="#i-arrow-left"></use></svg>بازگشت به سایت</a>
       <div class="tb-actions">
         <span class="hint">نکته: در پنجره چاپ، «ذخیره به‌عنوان PDF» و «گرافیک پس‌زمینه» را انتخاب کنید.</span>
         <button class="btn btn-primary btn-sm" data-print><svg class="icon"><use href="#i-printer"></use></svg>چاپ / دانلود PDF</button>
@@ -31,7 +31,7 @@
 
         <h3>اطلاعات تماس</h3>
         <ul class="cv-contact">
-          <li><svg class="icon"><use href="#i-phone"></use></svg><span dir="ltr">+98 912 345 6789</span></li>
+          <li><svg class="icon"><use href="#i-phone"></use></svg><span dir="ltr">+۹۸ ۹۱۲ ۳۴۵ ۶۷۸۹</span></li>
           <li><svg class="icon"><use href="#i-mail"></use></svg><span>hello@arash.dev</span></li>
           <li><svg class="icon"><use href="#i-globe"></use></svg><span>www.arash.dev</span></li>
           <li><svg class="icon"><use href="#i-map-pin"></use></svg><span>تهران، ایران</span></li>
